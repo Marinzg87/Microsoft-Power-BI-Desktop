@@ -15,5 +15,65 @@
         <p><em>Zmiana języka i regionu w "Regional Settings - CURRENT FILE": </em><br>
             > English (United States)<br></p>
     </div>
+    <div>
+        <h1><b>Best practicies: <em>connecting & shaping data</em></b></h1>
+        <p><b>Get yourself organized, before loading the data into Power BI</b></p>
+        <ul>
+            <li>Define clear and intuitive table names (no spaces!) from the start;
+                updating them later can be a headache, especially if you've references them in
+                multiple places.
+            </li>
+            <li>Establish a file/folder structure that makes sense from the start, to avoid having 
+                to modify data source settings if file names or location change.
+            </li>
+        </ul>
+        <p><b>Disabling report refresh for any static scources</b></p>
+        <ul>
+            <li>There's no need to constantly refresh sources that don't update frequently (or
+                at all), like lookups or static data tables; only enable refresh for tables 
+                that will be changing.
+            </li>
+        </ul>
+        <p><b>When working with large tables, only load the data you need</b></p>
+        <ul>
+            <li>Don't include hourly data when you only need daily, or product-level transactions 
+                when you only care about store-level performance; extra data will only slow you kown.
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h1>Database normalization</h1>
+        <p><b>Normalization</b> is the process of organizing the tables and columns in a relational 
+        database to reduce redundancy and preserve data integrity. It's commonly used to: </p>
+        <ul>
+            <li><b>Eliminate redundant data</b> to decrease table size and improve 
+            processing speed & efficiency.</li>
+            <li><b>Minimaze errors and anomalies</b> from data modifications 
+            (inserting, updating or deleting records.</li>
+            <li><b>Simplify queries</b> and structures the database for meainingful analysis.</li>
+        </ul>
+        <p><b>TIP:</b> In a normalized database, each table should serve a <b>distinct</b> and <b>specific</b> 
+        purpose (i.e. product information, dates, transaction records, customer attributes, etc.).</p>
+    </div>
+    <div>
+        <h1><b>Brst practicies: <em>data modeling</em></b></h1>
+        <p><b>Focus on building a normalized model from the start</b></p>
+        <ul>
+            <li>Make sure that each table in your model serves a single, distinct purpose.</li>
+            <li>Use relationships vs. merged tables; long & narrow tables are better than short & wide.</li>
+        </ul>
+        <p><b>Organize lookup tables above data tables in the diagram view</b></p>
+        <ul>
+            <li>This serves as a visual reminder that filters flow "downstream".</li>
+        </ul>
+        <p><b>Avoid complex cross-filtering unless absolutely necessary</b></p>
+        <ul>
+            <li>Don't use two-way filters when 1-way filters will get the job done.</li>
+        </ul>
+        <p><b>Hide fields from report view to prevent invalid filter context</b></p>
+        <ul>
+            <li>Recommend hiding foreign keys from data tables, so that users can only access valid fields.</li>
+        </ul>
+    </div>
 </body>
 </html>
