@@ -91,5 +91,31 @@
             the <b>"values"</b> field of a report visual.</li>
         </ul>
     </div>
+    <div>
+        <h1><b>Best Practices:</b> calculated columns & measures</h1>
+        <p><b>Don't use a calculated column when a measure will do the trick</b></p>
+        <ul>
+            <li>Only use calculated columns to "stamp" static, fixed values to each row in a table</li>
+            <li>Use measures when aggregation is necessary, or to create dynamic values in a report</li>
+        </ul>
+        <p><b>Write measures for even the simplest calculations</b> (i.e. Sum of Sales)</p>
+        <ul>
+            <li>Once you create a measure it can be used anywhere in the report and as an input to other, more 
+                complex calculations (no implicit measures!)
+            </li>
+        </ul>
+        <p><b>Break measures down into simple, component parts</b></p>
+        <ul>
+            <li>DAX is a difficult language to master; focus on practicing and understanding simple component at first, then assemblt them
+                into more advanced formulas
+            </li>
+        </ul>
+        <p><b>Reference columns with the table name, and measures alone</b></p>
+        <ul>
+            <li>Using "fully qualified" column references (preceeded by the table name) helps make formulas more readable and intuitive, and differentiates them 
+                from measure references
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
